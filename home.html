@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>i am home page</h1>
-</body>
+
+    <!-- daisy ui cdn must be upper from tailwind css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] h-[100vh]">
+    <div class="bg-white max-w-lg mx-auto rounded-b-xl p-5">
+      <div
+        class="border-b-1 border-gray-400 minh-[50px] flex justify-between items-center pb-4"
+      >
+        <div class="flex items-center">
+          <img src="./media/assets/Group.png" alt="" />
+          <div class="ml-5">
+            <h2 class="font-bold">$<span>45000</span></h2>
+            <p class="text-[#08080880]">Available Balance</p>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn text-[#08080880]">
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-600"
+            ></i
+            >Log Out
+          </button>
+        </div>
+      </div>
+
+      <div class="max-w-lg mx-auto mt-8">
+        <h1 class="font-bold text-2xl mb-2">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880]">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <div class="max-w-lg mx-auto min-h-[200px] mt-11 grid grid-cols-3 gap-4 ">
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-3 rounded-xl">
+          <img class="mx-auto" src="media/assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
