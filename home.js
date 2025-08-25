@@ -10,33 +10,35 @@ function getInputValueNumber(id) {
   return inputFieldValueNumber;
 }
 
-function getInputValue(id){
-  const inputField=document.getElementById(id);
-  const inputFieldValue=inputField.value;
+function getInputValue(id) {
+  const inputField = document.getElementById(id);
+  const inputFieldValue = inputField.value;
   return inputFieldValue;
 }
 
 // to get inner text-->
-function getInnerText(id){
-  const element=document.getElementById(id);
-  const elementValue=element.innerText;
-  const elementValueNumber=parseInt(elementValue);
+function getInnerText(id) {
+  const element = document.getElementById(id);
+  const elementValue = element.innerText;
+  const elementValueNumber = parseInt(elementValue);
   return elementValueNumber;
 }
 
 // to set inner text-->
 
-function setInnerText(value){
-  const availableBalanceElement= document.getElementById("available-balance");
-  availableBalanceElement.innerText=value;
+function setInnerText(value) {
+  const availableBalanceElement = document.getElementById("available-balance");
+  availableBalanceElement.innerText = value;
 }
 
-    // const totalAvailableBalance = amount + availableBalance;
-
-    // document.getElementById("available-balance").innerText =
-    //   totalAvailableBalance;
-
-
+// function to toggle-->
+function handleToggle(id) {
+  const forms = document.getElementsByClassName("form");
+  for (const form of forms) {
+    form.style.display = "none";
+    document.getElementById(id).style.display = "block";
+  }
+}
 
 document
   .getElementById("add-money-btn")
@@ -77,6 +79,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 
   if (pin !== validPin || accountNumber !== validAccount) {
     alert("your pin or account number is invalid");
+    return;
   }
 
   const totalAvailableBalance = availableBalance - amount;
@@ -87,15 +90,23 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 //   toggling feature---->
 
 document.getElementById("add-button").addEventListener("click", function () {
-  document.getElementById("cash-out-parent").style.display = "none";
-
-  document.getElementById("add-money-parent").style.display = "block";
+  handleToggle("add-money-parent");
 });
 
 document
   .getElementById("cash-out-button")
   .addEventListener("click", function () {
-    document.getElementById("add-money-parent").style.display = "none";
+    handleToggle("cash-out-parent");
+  });
 
-    document.getElementById("cash-out-parent").style.display = "block";
+document
+  .getElementById("transfer-money-button")
+  .addEventListener("click", function () {
+    handleToggle("transfer-money-parent");
+  });
+
+document
+  .getElementById("get-bonus-button")
+  .addEventListener("click", function () {
+    handleToggle("get-bonus-parent");
   });
